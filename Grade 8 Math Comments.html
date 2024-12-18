@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#comment {
+    width: 600px;
+    height: 120px;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+<script>
+$('document').ready(
+  function(){
+    
+    $(':radio').change(function() {
+	$("#comment").val($('input[name=grade]:checked').val() + $("#firstname").val() + " in ");
+	$("#comment").val($("#comment").val() + $('input[name=strong]:checked').val())
+	$("#comment").val($("#comment").val() + $('input[name=weak]:checked').val())
+	$("#comment").val($("#comment").val() + $('input[name=final]:checked').val())
+	$("#comment").val($("#comment").val() + "")
+
+    });
+  }
+);
+</script>
+</head>
+
+<body>
+<form>
+ 
+ First Name<br>
+ <input type="text" id="firstname" name="firstname"><br> 
+ <br>
+
+ Proficiency<br>
+ <input type="radio" name="grade" value="A beginning level of understanding was demonstrated by ">Beginning<br>
+ <input type="radio" name="grade" value="A developing level of understanding was demonstrated by ">Developing<br>
+ <input type="radio" name="grade" value="A proficient level of understanding was demonstrated by ">Proficient<br>
+ <input type="radio" name="grade" value="An exemplary level of understanding was demonstrated by ">Exemplary<br>
+ <br>
+
+ Stem<br>
+<input type="radio" name="strong" value="number sense, computation and estimation.">develops number sense and applies strategies for computation and estimation <br>
+<input type="radio" name="strong" value="using algebraic reasoning to represent patterns and relationships.">uses algebraic reasoning to represent patterns and relationships <br>
+<input type="radio" name="strong" value="applying spatial reasoning and measurement to make sense of the natural world.">applies spatial reasoning and measurement to make sense of the natural world  <br>
+ <br>
+
+ Evidence<br>
+ <input type="radio" name="weak" value="This was demonstrated through their Transformation unit test, where they ">Transformation Unit Test<br>
+ <input type="radio" name="weak" value="This was demonstrated through their Squares and Square roots unit test, where they ">Squares and Square roots unit test<br>
+<input type="radio" name="weak" value="This was demonstrated through their Integers unit test, where they ">Integers unit test<br>
+ <input type="radio" name="weak" value="This was demonstrated through their Transformation Task, where they">Transformation Task<br>
+ <br>
+
+ Success Criteria<br>
+ <input type="radio" name="final" value="performed successive transformations of a shape and specified how an image had been transformed. ">Transformations 2<br>
+ <input type="radio" name="final" value="specified in detail how an image has been transformed and explained that congruence is maintained after a series of transformations.">Transformations 3<br>
+ <input type="radio" name="final" value="identified and labeled the vertices of an original shape given the coordinates of the image and a description of the transformations. ">Transformations 4<br>
+ <input type="radio" name="final" value="determined the square of a number and the square root of a perfect square.">Square root 2<br>   
+ <input type="radio" name="final" value="estimated the square roots of non-perfect squares by identifying benchmarks.">Square root 3<br>
+ <input type="radio" name="final" value="estimated the square roots of non-perfect squares to the hundredths place and justified the reasonableness of their estimate.">Square root 4<br>
+ <input type="radio" name="final" value="modeled multiplication and division of integers.">Integers 2<br>   
+ <input type="radio" name="final" value="solved problems involving multiplication and division of integers.">Integers 3<br>  
+ <input type="radio" name="final" value="solved complex problems involving integers and order of operations when appropriate.">Integers 4<br>   
+ 
+<br>
+
+ Comment <br>
+ <textarea id="comment" rows="10" cols="80"></textarea><br>
+ 
+
+</form> 
+</body>
+</html>
